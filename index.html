@@ -29,19 +29,127 @@ text-decoration:underline;
 
 }
 nav{
-
+display:flex;
+box-sizing:border-box;
+align-items:center;
+flex-shrink: 0;
 width:100%;
 height:60px;
 
 }
 
+
+footer{
+    position:fixed;
+bottom:0;
+    width:100%
+
+}
+
     .navbar-right {
+        position:fixed;
+        right:0;
         float: right;
+        display:flex;
+
+        
     }
 
     .navbar-left {
         float: left;
     }
+
+
+
+    .logo-container{
+display:flex;
+flex-direction: column;
+flex-shrink:0;
+width:100%;
+min-height: 150px;
+max-height: 290px;
+align-items: center;
+justify-content: flex-end;
+
+    }
+
+.logo{
+display: flex;
+
+
+
+
+}
+
+.search-button-container{
+    width:100%;
+    padding:20px;
+    max-height: 160px;
+}
+
+.searchbar{
+    display: flex;
+    border:1px solid #dfe1e5;
+    width: auto;
+    max-width: 584px;
+ position: relative;
+ margin:0 auto;
+ border-radius: 24px;
+ height:44px;
+ box-shadow: none;
+}
+
+.searchbar-container{
+    display: flex;
+    flex:1;
+    flex-wrap: wrap;
+}
+
+.searchbar-input{
+background-color: transparent;
+border: none;
+margin: 0;
+padding: 0;
+color: rgb(0,0,0,0.87);
+word-wrap: break-word;
+outline: none;
+display: flex;
+flex:100%;
+height: 34px;
+font-size: 16px;
+}
+
+.submit-buttons{
+    padding-top: -18px;
+    height: 70px;
+    display: flex;
+  justify-content: center;
+}
+
+.buttn{
+    border:4px;
+    font-size: 14px;
+    line-height: 27px;
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    padding:0 16px;
+    margin:11px 4px;
+}
+
+.buttn:hover{
+box-shadow:0 1px 1px rgba(0,0,0,0.1);
+background-color: #f8f9fa;
+border: 1px solid #dadce0;
+color:#202124;}
+
+
+
+
+}
+
 </style>
 
 
@@ -80,7 +188,7 @@ height:60px;
 
     <!--Google Logo Container-->
     <div class="logo-container">
-        <img src="/images/googlelogo_color_272x92dp.png"
+        <img class="logo" src="/images/googlelogo_color_272x92dp.png"
             alt="The Google logo. The word Google in bright colorful letters">
 
     </div>
@@ -88,23 +196,23 @@ height:60px;
 
     <!--Search and Buttons Container-->
     <div class="search-button-container">
-        <div>
+        
             <div class="searchbar">
                 <div class="search-icon-container">
 
                 </div>
                 <div class="searchbar-container">
-                    <input type="text">
+                    <input class="searchbar-input" type="text">
 
                 </div>
 
             </div>
             <div class="submit-buttons">
-                <input type="button" value="Google Search">
-                <input type="button" value="I'm Feeling Lucky">
+                <input class="buttn" type="button" value="Google Search">
+                <input class="buttn" type="button" value="I'm Feeling Lucky">
 
             </div>
-        </div>
+        
 
     </div>
 
@@ -112,15 +220,17 @@ height:60px;
     <div class="whitespace-container">
 
     </div>
-    <!--Location container-->
-    <div class="location-container">
-        <span>United Kingdom</span>
-    </div>
+  
 
 
     <!--Footer-->
     <footer class="footer">
+  <!--Location container-->
+  <div class="location-container">
+    <span>United Kingdom</span>
+</div>
 
+<div class="footer-links">
         <div class="footer-top">
             <a href="#"><span>Carbon neutral since 2007</span></a>
         </div>
@@ -135,7 +245,7 @@ height:60px;
             <li><a href="#">Search</a></li>
             <li><a href="#">Settings</a></li>
         </ul>
-
+</div>
     </footer>
 
 </body>
