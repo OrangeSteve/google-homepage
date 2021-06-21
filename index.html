@@ -18,9 +18,12 @@
        
     }
 
-a{      text-decoration-line: none;
+a{      
+    display: block;
+    text-decoration-line: none;
         text-decoration-style: solid;
-        color:rgb(34, 34, 34);}
+        color:rgb(34, 34, 34);
+      }
 
 a:hover{
     text-decoration-color: rgb(34, 34, 34);
@@ -39,12 +42,7 @@ height:60px;
 }
 
 
-footer{
-    position:fixed;
-bottom:0;
-    width:100%
 
-}
 
     .navbar-right {
         position:fixed;
@@ -145,9 +143,66 @@ background-color: #f8f9fa;
 border: 1px solid #dadce0;
 color:#202124;}
 
+footer{
+    display:flex;
+    flex-direction:column;
+   
+    position:fixed;
+bottom:0;
+    width:100%
+
+}
+
+
+.location-container{
+    width:100%;
+}
+
+.footer-links{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-left-links{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    min-width: 30%;
+    order:1;
+}
+.carbon-neutral-container{
+display: flex;
+justify-content: space-between;
+order:2;
+}
+.carbon-link{
+    padding: 15px;
+  
+}
 
 
 
+.footer-right-links{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    min-width: 30%;
+order:3;
+}
+
+@media only screen and (max-width:1200px){
+    .carbon-neutral-container{
+     
+        justify-content: center;
+        order:0;
+        width:100%;
+     
+    }
+
+    .footer-links{
+        justify-content: space-evenly;
+    }
 }
 
 </style>
@@ -208,6 +263,7 @@ color:#202124;}
 
             </div>
             <div class="submit-buttons">
+                
                 <input class="buttn" type="button" value="Google Search">
                 <input class="buttn" type="button" value="I'm Feeling Lucky">
 
@@ -216,10 +272,7 @@ color:#202124;}
 
     </div>
 
-    <!--WhiteSpace-->
-    <div class="whitespace-container">
-
-    </div>
+    
   
 
 
@@ -230,21 +283,32 @@ color:#202124;}
     <span>United Kingdom</span>
 </div>
 
+
+
 <div class="footer-links">
-        <div class="footer-top">
-            <a href="#"><span>Carbon neutral since 2007</span></a>
-        </div>
+       
+           
+      
+
+        <div class="footer-left-links">
         <ul class="footer-left-list">
             <li><a href="#">Advertising</a></li>
             <li><a href="#">Business</a></li>
             <li><a href="#">How Search Works</a></li>
         </ul>
-
+        </div>
+        <div class="carbon-neutral-container">
+            <a class="carbon-link" href="#"><span>Carbon neutral since 2007</span></a>
+            </div>
+        
+        <div class="footer-right-links"> 
         <ul class="footer-right-list">
             <li><a href="#">Privacy</a></li>
             <li><a href="#">Search</a></li>
             <li><a href="#">Settings</a></li>
         </ul>
+        </div>
+        </div>
 </div>
     </footer>
 
